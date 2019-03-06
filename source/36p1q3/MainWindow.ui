@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindowClass</class>
+ <widget class="QMainWindow" name="MainWindowClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>491</width>
+    <height>542</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>491</width>
+    <height>541</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>365 Project 1 Task 3 (tmontesa)</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QPushButton" name="btnQuit">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>10</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::RightToLeft</enum>
+    </property>
+    <property name="text">
+     <string>Quit</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnFile">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>10</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>File</string>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblFilename">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>291</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>No file selected.</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnEffectRed">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>71</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Red</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnEffectBlue">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>50</y>
+      <width>71</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Blue</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnEffectGreen">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>50</y>
+      <width>71</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Green</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnEffectBright">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>50</y>
+      <width>71</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>1.5x Bright</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnEffectGreyscale">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>50</y>
+      <width>71</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Greyscale</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnEffectDither">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>50</y>
+      <width>71</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Dither</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblInfo">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>291</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="text">
+     <string>0 x 0 image (0-bit)</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnEffectRGB">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>10</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Reset</string>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="WidgetCanvas" name="Canvas" native="true">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>2048</width>
+      <height>2048</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>2048</width>
+      <height>2048</height>
+     </size>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>WidgetCanvas</class>
+   <extends>QWidget</extends>
+   <header>widgetcanvas.h</header>
+   <container>1</container>
+   <slots>
+    <slot>GetPixelstream(QString,int,int)</slot>
+    <slot>SetEffectRed()</slot>
+    <slot>SetEffectRGB()</slot>
+    <slot>SetEffectGreen()</slot>
+    <slot>SetEffectBlue()</slot>
+    <slot>SetEffectGreyscale()</slot>
+    <slot>SetEffectBright()</slot>
+    <slot>SetEffectDither()</slot>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>btnQuit</tabstop>
+  <tabstop>btnEffectRed</tabstop>
+  <tabstop>btnEffectBlue</tabstop>
+  <tabstop>btnEffectGreen</tabstop>
+  <tabstop>btnEffectBright</tabstop>
+  <tabstop>btnEffectGreyscale</tabstop>
+  <tabstop>btnEffectDither</tabstop>
+  <tabstop>btnEffectRGB</tabstop>
+  <tabstop>btnFile</tabstop>
+ </tabstops>
+ <resources>
+  <include location="MainWindow.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>btnQuit</sender>
+   <signal>released()</signal>
+   <receiver>MainWindowClass</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>453</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>490</x>
+     <y>397</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnFile</sender>
+   <signal>released()</signal>
+   <receiver>MainWindowClass</receiver>
+   <slot>GetFile()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>359</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>490</x>
+     <y>5</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>MainWindowClass</sender>
+   <signal>OpenFile(QString)</signal>
+   <receiver>lblFilename</receiver>
+   <slot>setText(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>44</x>
+     <y>41</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>46</x>
+     <y>23</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>MainWindowClass</sender>
+   <signal>PassInfo(QString)</signal>
+   <receiver>lblInfo</receiver>
+   <slot>setText(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>25</x>
+     <y>45</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>23</x>
+     <y>32</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>MainWindowClass</sender>
+   <signal>StreamPixels(QString,int,int)</signal>
+   <receiver>Canvas</receiver>
+   <slot>GetPixelstream(QString,int,int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>0</x>
+     <y>234</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>59</x>
+     <y>164</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnEffectRed</sender>
+   <signal>released()</signal>
+   <receiver>Canvas</receiver>
+   <slot>SetEffectRed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>70</x>
+     <y>524</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>76</x>
+     <y>464</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnEffectRGB</sender>
+   <signal>released()</signal>
+   <receiver>Canvas</receiver>
+   <slot>SetEffectRGB()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>405</x>
+     <y>24</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>406</x>
+     <y>67</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnEffectGreen</sender>
+   <signal>released()</signal>
+   <receiver>Canvas</receiver>
+   <slot>SetEffectGreen()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>131</x>
+     <y>520</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>130</x>
+     <y>494</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnEffectBlue</sender>
+   <signal>released()</signal>
+   <receiver>Canvas</receiver>
+   <slot>SetEffectBlue()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>206</x>
+     <y>527</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>206</x>
+     <y>487</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnEffectGreyscale</sender>
+   <signal>released()</signal>
+   <receiver>Canvas</receiver>
+   <slot>SetEffectGreyscale()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>358</x>
+     <y>523</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>367</x>
+     <y>466</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnEffectBright</sender>
+   <signal>released()</signal>
+   <receiver>Canvas</receiver>
+   <slot>SetEffectBright()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>294</x>
+     <y>526</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>291</x>
+     <y>484</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnEffectDither</sender>
+   <signal>released()</signal>
+   <receiver>Canvas</receiver>
+   <slot>SetEffectDither()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>444</x>
+     <y>523</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>445</x>
+     <y>474</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <signal>OpenFile(QString)</signal>
+  <signal>StreamFile(QString)</signal>
+  <signal>PassInfo(QString)</signal>
+  <signal>StreamPixels(QString,int,int)</signal>
+  <slot>GetFile()</slot>
+ </slots>
+</ui>
